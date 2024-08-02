@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Boletim
-df_boletins = pd.read_excel('pages\boletins.xlsx')
+df_boletins = pd.read_excel(r'pages\boletins.xlsx')
 # Inverter a ordem do DataFrame
 df_boletins = df_boletins.iloc[::-1]
 

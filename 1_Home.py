@@ -54,7 +54,7 @@ elif selected == "Fotos":
     # st.header('Fotos')
     st.subheader('Um pouco das memórias e histórias do PET Economia')
     st.subheader('#')
-    st.image('image\capa.png')
+    st.image(r'image\capa.png')
 
 elif selected == 'Contato':
     st.header('Contato')
