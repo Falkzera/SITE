@@ -14,13 +14,15 @@ st.set_page_config(
 )
 
 # Boletim
-file_path = r'pages\boletins.xlsx'
-# Verificação de DataFrame
 try:
-    df_boletins = pd.read_excel(file_path)
-    df_boletins = df_boletins.iloc[::-1]
+    file_path = r'pages\boletins.xlsx'
 except FileNotFoundError:
-    st.error(f'Arquivo não encontrado: "boletins.xlsx"')
+    st.error('Arquivo Excel: Boletins não encontrado.')
+# Verificação de DataFrame
+
+df_boletins = pd.read_excel(file_path)
+df_boletins = df_boletins.iloc[::-1]
+
 
 st.title('Nossas atividades:')
 styled_text(
@@ -76,8 +78,10 @@ if selected == 'Boletim':
             st.markdown(f"[Leia mais]({selected_boletim['LINK'].values[0]})")
     else:
         st.error("O DataFrame 'df_boletins' não está carregado.")
-
-    st.image('image/boletim.png', width=450, use_column_width=None)
+    try:
+        st.image('image/boletim.png', width=450, use_column_width=None)
+    except FileNotFoundError:
+        st.error('Imagem da seção de boletim não encontrada.')
 
 
 
@@ -92,7 +96,10 @@ if selected == 'Nivelamento':
             text_align='justify'
 )
     st.subheader("##")
-    st.image('image/nivelamento.png', width=450, use_column_width=None)
+    try:
+        st.image('image/nivelamento.png', width=450, use_column_width=None)
+    except FileNotFoundError:
+        st.error('Imagem da seção de nivelamento não encontrada.')
 
 if selected == 'Série de Estudos':
     
@@ -119,8 +126,10 @@ if selected == 'Encontros':
             text_align='justify'
 )
     st.subheader("##")
-    st.image('image/interpet_2023.jpg', width=450, use_column_width=None)
-
+    try:
+        st.image('image/interpet_2023.jpg', width=450, use_column_width=None)
+    except FileNotFoundError:
+        st.error('Imagem da seção de InterPET não encontrada.')
 # ATIVIDADE
     st.subheader("##")
 
@@ -135,7 +144,10 @@ if selected == 'Encontros':
             text_align='justify'
 )
     st.subheader("##")
-    st.image('image/enepet_2023.png', width=450, use_column_width=None)
+    try:
+        st.image('image/enepet_2023.png', width=450, use_column_width=None)
+    except FileNotFoundError:
+        st.error('Imagem da seção de ENEPET não encontrada.')
 
 # ATIVIDADE
     st.subheader("##")
@@ -150,8 +162,11 @@ if selected == 'Encontros':
             text_align='justify'
 )
     st.subheader("##")
-    st.image('image/enapet_2023.png', width=450, use_column_width=None)
-
+    try:
+        st.image('image/enapet_2023.png', width=450, use_column_width=None)
+    except FileNotFoundError:
+        st.error('Imagem da seção de ENAPET não encontrada.')
+        
 if selected == 'Outros':
     
     st.title('Outras atividades:')

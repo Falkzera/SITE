@@ -40,21 +40,25 @@ with st.container():
         orientation='horizontal',
     ) 
 
-
-
 if selected == 'Novidades':
     st.subheader("#")
     st.subheader('Acomapanhe as Novidades do PETECO :fire:') 
     st.subheader("#") 
     st.markdown('#### Vem aí a Semana de Economia!')
-    st.image(r'image\semana_economia_vem_ai.gif')
+    try:
+        st.image(r'image\semana_economia_vem_ai.gif')
+    except FileNotFoundError:
+        st.error('Imagem da seção de novidades não encontrada.')
 
 elif selected == "Fotos":
     st.markdown('---')
     # st.header('Fotos')
     st.subheader('Um pouco das memórias e histórias do PET Economia')
     st.subheader('#')
-    st.image(r'image\capa.png')
+    try: 
+        st.image(r'image\capa.png')
+    except FileNotFoundError:
+        st.error('Imagem da seção de fotos não encontrada.')
 
 elif selected == 'Contato':
     st.header('Contato')

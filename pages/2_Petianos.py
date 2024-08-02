@@ -12,7 +12,10 @@ st.set_page_config(
 )
 
 # Caminho absoluto para o arquivo Excel
-file_path = 'pages\lista_petianos.xlsx'
+try:
+    file_path = r'pages\lista_petianos.xlsx'
+except FileNotFoundError:
+    st.error('Arquivo Excel: Lista de Petianos não encontrado.')
 
 # Carregar o arquivo Excel
 
@@ -30,7 +33,10 @@ if 'df' in locals():
         st.write(f"Membros que fizeram e fazem parte da história do PET Economia.")
         col1, col2, col3 = st.columns(3)
         with col2:
-            st.image('image\keuler_hissa.jpg', width=200)
+            try:
+                st.image('image\keuler_hissa.jpg', width=200)
+            except FileNotFoundError:
+                st.error('Imagem do tutor não encontrada.')
             st.markdown('[Tutor: Keuler Hissa](http://lattes.cnpq.br/1732919330877406)')
 
         # Filtro temporal com slider
