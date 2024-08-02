@@ -14,9 +14,13 @@ st.set_page_config(
 )
 
 # Boletim
-df_boletins = pd.read_excel(r'pages\boletins.xlsx')
-# Inverter a ordem do DataFrame
-df_boletins = df_boletins.iloc[::-1]
+file_path = r'pages\boletins.xlsx'
+# Verificação de DataFrame
+try:
+    df_boletins = pd.read_excel(file_path)
+    df_boletins = df_boletins.iloc[::-1]
+except FileNotFoundError:
+    st.error(f'Arquivo não encontrado: "boletins.xlsx"')
 
 st.title('Nossas atividades:')
 styled_text(
