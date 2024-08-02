@@ -34,7 +34,7 @@ if 'df' in locals():
         col1, col2, col3 = st.columns(3)
         with col2:
             try:
-                st.image('image\keuler_hissa.jpg', width=200)
+                st.image(r'image\keuler_hissa.jpg', width=200)
             except FileNotFoundError:
                 st.error('Imagem do tutor não encontrada.')
             st.markdown('[Tutor: Keuler Hissa](http://lattes.cnpq.br/1732919330877406)')
