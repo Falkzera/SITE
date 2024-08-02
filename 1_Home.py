@@ -47,7 +47,7 @@ if selected == 'Novidades':
     st.subheader('Acomapanhe as Novidades do PETECO :fire:') 
     st.subheader("#") 
     st.markdown('#### Vem aí a Semana de Economia!')
-    st.image('image\semana_economia_vem_ai.gif')
+    st.image(r'image\semana_economia_vem_ai.gif')
 
 elif selected == "Fotos":
     st.markdown('---')
