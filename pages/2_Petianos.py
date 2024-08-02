@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Caminho absoluto para o arquivo Excel
-file_path = r'C:\Users\lucas\Desktop\PYTHON\CURSOS\CURSO DE PYTHON UDEMY\SITE\pages\lista_petianos.xlsx'
+file_path = 'lista_petianos.xlsx'
 
 # Carregar o arquivo Excel
 
