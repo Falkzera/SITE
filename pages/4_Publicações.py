@@ -1,4 +1,8 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
+from style_background import style_background
+from style_text import styled_text
+import pandas as pd
 
 # Configuração wide
 # Configuração da página
