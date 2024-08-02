@@ -1,0 +1,5 @@
+[theme]
+primaryColor = "#1f77b4"   # Cor primária do tema (opcional)
+backgroundColor = "#FFFFFF"  # Cor de fundo do aplicativo
+textColor = "#333333"      # Cor do texto (opcional)
+font = "sans serif"        # Fonte do texto (opcional)
