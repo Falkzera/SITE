@@ -15,7 +15,7 @@ st.set_page_config(
 
 # Boletim
 try:
-    file_path = r'pages\boletins.xlsx'
+    file_path = 'pages/boletins.xlsx'
 except FileNotFoundError:
     st.error('Arquivo Excel: Boletins não encontrado.')
 # Verificação de DataFrame

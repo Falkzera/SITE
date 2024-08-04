@@ -46,7 +46,7 @@ if selected == 'Novidades':
     st.subheader("#") 
     st.markdown('#### Vem aí a Semana de Economia!')
     try:
-        st.image(r'image\semana_economia_vem_ai.gif')
+        st.image('image/semana_economia_vem_ai.gif')
     except FileNotFoundError:
         st.error('Imagem da seção de novidades não encontrada.')
 
@@ -56,7 +56,7 @@ elif selected == "Fotos":
     st.subheader('Um pouco das memórias e histórias do PET Economia')
     st.subheader('#')
     try: 
-        st.image(r'image\capa.png')
+        st.image('image/capa.png')
     except FileNotFoundError:
         st.error('Imagem da seção de fotos não encontrada.')
 
