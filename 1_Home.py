@@ -46,7 +46,7 @@ if selected == 'Novidades':
     st.subheader("#") 
     st.markdown('#### Vem aí a Semana de Economia!')
     try:
-        st.image('image/semana_economia_vem_ai.gif')
+        st.image('image/semana_economia_novo.gif', width=700)
     except FileNotFoundError:
         st.error('Imagem da seção de novidades não encontrada.')
 
