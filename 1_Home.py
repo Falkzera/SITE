@@ -82,7 +82,6 @@ with st.sidebar:
         </a>
     </div>
     """
-
     with st.sidebar:
         st.markdown(social_media_html, unsafe_allow_html=True)
         st.markdown('---')
