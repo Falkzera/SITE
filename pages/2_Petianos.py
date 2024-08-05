@@ -9,9 +9,11 @@ st.set_page_config(
     page_title="Petianos",          # Título da página
     page_icon=":shark:",            # Ícone da página (emojis são suportados)
     layout="wide",                   # Layout da página
+    initial_sidebar_state="auto"  # Estado inicial da barra lateral
 )
 
 # Caminho absoluto para o arquivo Excel
+st.image('image/banner_site.png', use_column_width=True)
 try:
     file_path = 'pages/lista_petianos.xlsx'
 except FileNotFoundError:

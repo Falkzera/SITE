@@ -8,11 +8,12 @@ import pandas as pd
 # Configuração da página
 st.set_page_config(
     page_title="Atividades",  # Título da aba do navegador
-    page_icon="file-text",                  # Ícone da aba do navegador (opcional)
+    page_icon=":book:",                  # Ícone da aba do navegador (opcional)
     layout="wide",                        # Define o layout da página como "wide"
-    initial_sidebar_state="expanded"      # Estado inicial da barra lateral ("expanded" ou "collapsed")
+    initial_sidebar_state="auto"      # Estado inicial da barra lateral ("expanded" ou "collapsed")
 )
 
+st.image('image/banner_site.png', use_column_width=True)
 # Boletim
 try:
     file_path = 'pages/boletins.xlsx'

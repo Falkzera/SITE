@@ -7,12 +7,13 @@ import pandas as pd
 # Configurações de página
 st.set_page_config(
     page_title="Home",  
-    page_icon=":home:",                  
+    page_icon=":house:",                  
     layout="centered",                        
-    initial_sidebar_state="expanded"     
+    initial_sidebar_state="auto"     
 )
 # Título do site
-st.title('Seja-Bem vindo :wave:')
+st.image('image/banner_site.png', use_column_width=True)
+st.title('*Seja-Bem vindo* :wave:')
 st.title('Ao site do PET ECONOMIA :fire:')
 
 # Subtitle

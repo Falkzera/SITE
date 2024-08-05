@@ -7,25 +7,13 @@ import pandas as pd
 # Configuração wide
 # Configuração da página
 st.set_page_config(
-    page_title="Petianos",  # Título da aba do navegador
-    page_icon=":write:",                  # Ícone da aba do navegador (opcional)
+    page_title="Publicações",  # Título da aba do navegador
+    page_icon=":rocket:",                  # Ícone da aba do navegador (opcional)
     layout="wide",                        # Define o layout da página como "wide"
-    initial_sidebar_state="expanded"      # Estado inicial da barra lateral ("expanded" ou "collapsed")
+    initial_sidebar_state="auto"      # Estado inicial da barra lateral ("expanded" ou "collapsed")
 )
-
+st.image('image/banner_site.png', use_column_width=True)
 st.title('Publicações')
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Redes sociais e créditos
 with st.sidebar:
