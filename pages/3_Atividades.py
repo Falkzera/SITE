@@ -84,8 +84,6 @@ if selected == 'Boletim':
     except FileNotFoundError:
         st.error('Imagem da seção de boletim não encontrada.')
 
-
-
 if selected == 'Nivelamento':
     
     st.title('Nivelamento de matemática:')
@@ -242,6 +240,3 @@ with st.sidebar:
     st.markdown(social_media_html, unsafe_allow_html=True)
     st.markdown('---')
     st.sidebar.markdown('Developer by: [Lucas Falcão](https://GitHub.com/Falkzera)')
-
-
-

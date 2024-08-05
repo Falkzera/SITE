@@ -11,7 +11,6 @@ st.set_page_config(
     layout="wide",                   # Layout da página
     initial_sidebar_state="auto"  # Estado inicial da barra lateral
 )
-
 # Caminho absoluto para o arquivo Excel
 st.image('image/banner_site.png', use_column_width=True)
 try:
@@ -22,7 +21,6 @@ except FileNotFoundError:
 # Carregar o arquivo Excel
 
 df = pd.read_excel(file_path)
-
 
 if 'df' in locals():
     # Converter colunas de data para o tipo datetime
