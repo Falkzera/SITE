@@ -44,7 +44,26 @@ if selected == 'Novidades':
     st.subheader("#")
     st.subheader('Acomapanhe as Novidades do PETECO :fire:') 
     st.subheader("#") 
-    st.markdown('#### Vem aí a Semana de Economia!')
+    st.subheader('Boletim 2T/2024 Postado! 🚀')
+    with st.expander('Clique aqui para ver o boletim', expanded=True):
+        st.caption('Boletim 2T/2024')
+    
+        pdf_path = "news/2T_24.pdf"
+        # Ler o arquivo PDF
+        with open(pdf_path, "rb") as pdf_file:
+            pdf_bytes = pdf_file.read()
+        # Exibir o PDF na página
+
+        st.download_button(label="Baixar PDF", data=pdf_bytes, file_name=pdf_path, mime="application/pdf")
+
+        st.write('Visualize Online: [Boletim 2T/24](https://drive.google.com/file/d/1AuFH30gvOuw6e1qKh1_dZ2CeS12p3Z_j/view)')
+        try:
+            st.image('image/boletim.png')
+        except FileNotFoundError:
+            st.error('Imagem do boletim não encontrada.')
+
+    st.subheader("#") 
+    st.markdown('#### Vem aí a Semana de Economia! ⚙️')
     try:
         st.image('image/semana_economia_novo.gif')
     except FileNotFoundError:
